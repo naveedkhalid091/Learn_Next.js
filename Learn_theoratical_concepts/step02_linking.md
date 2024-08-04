@@ -43,3 +43,25 @@ Navigating into back to the root pages.
     export default function About() { 
          return <Link href="/dashboard">Home Page</Link> 
         }
+
+
+
+ii) Using the useRouter() hook (Client Components)
+
+The useRouter hook allows you to programmatically change routes from Client Components.
+
+Programmatically means? Programmatic navigation refers to the ability to navigate between pages in your application based on conditions or logic. 
+
+Here are some common scenarios where programmatic navigation is used:
+`Form Submissions`:
+Redirect a user to a new page after they successfully submit a form.
+Example: After submitting a login form, you might want to redirect the user to their dashboard.
+
+`Dynamic Routes:`
+Change routes dynamically based on user input or application state.
+Example: Navigate to a specific product page based on the product ID entered by the user.
+
+`Conditional Navigation:`
+Navigate based on certain conditions, such as user roles, authentication status, or specific application state.
+Example: Redirect users to a login page if they try to access a protected route without being authenticated.
+
