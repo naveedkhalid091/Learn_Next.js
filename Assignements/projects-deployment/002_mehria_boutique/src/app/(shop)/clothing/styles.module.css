@@ -1,0 +1,8 @@
+.customClass{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 1.5em;
+    background-color: rgb(53, 53, 106);
+    color: rgb(240, 110, 136);
+}

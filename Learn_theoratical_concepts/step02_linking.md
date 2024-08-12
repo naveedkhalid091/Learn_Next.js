@@ -65,3 +65,7 @@ Example: Navigate to a specific product page based on the product ID entered by 
 Navigate based on certain conditions, such as user roles, authentication status, or specific application state.
 Example: Redirect users to a login page if they try to access a protected route without being authenticated.
 
+`How Routing and Navigation Works`
+
+The App Router uses a hybrid approach for routing and navigation. On the server, your application code is automatically code-split by route segments. And on the client, Next.js prefetches and caches the route segments. This means, when a user navigates to a new route, the browser doesn't reload the page, and only the route segments that change re-render - improving the navigation experience and performance.
+
