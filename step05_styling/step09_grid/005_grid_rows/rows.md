@@ -1,30 +1,39 @@
-## Grid Rows
+## Creating Rows in Grid (auto sizing):
 
-The poperty of grid row is given below:
+The utilities `grid-rows-*` is used to specify how many rows you need on a web page with the size of each row:
 
-`grid-rows-writeNumber`
+`For Example`
 
-## Use cases of `grid-rows-WriteNumber`:
-
-use this utility if you need to create horizontal space (Row wise) of a page as per your requirments.
+`grid-rows-1`: creates one row with 100% width on a web page.
+`grid-rows-2`: creates two rows with 50% width of each web page.
+`grid-rows-3`: creates three rows with 33.34% width of each web page.
 
 `For Example`:
 
-Using `grid-rows-2` doesn’t limit you to only two pieces of content/elements, but it divides the availble space of a page into two sections (Row wise).
+Using `grid-rows-2` All the written content on a web page will be fixed into two rows.
 
-## Utilities of rows:
+## Creating rows in a web page (custom sizing)
 
-`grid-rows-1`: Creates one grid row occupying full row wise space of the main/parent container
-`grid-rows-2`: Creates two grid rows occupying 50% row wise space of each of the main/parent container.
-`grid-rows-3`: Creates three grid rows occupying 33% row wised spcae of each of the main/parent container.
-
-The aboe utilites will auto adjust the space in between them but However if you want to create or define the `custom space` of each the containers/element then you can follow the same column based syntax, as follows:
-
-i) grid-rows-[60%,40%] : Two rows will be created with the first row at 60% space while the othe row will take up the 40% space.
-e.g
-
- <div className=grid-cols-[60%,40%]>
+<div className=grid-rows-[30%,70%]>
         <p>----</p>
- </div>
- 
-ii) grid-rows-[auto,1fr,auto]: Here the three rows will be created: first and last will take automatic spaces while the middle row will take the remaining space after the first and third row.
+</div>
+
+The above code will split a web page into two rows one with 30% width while the other with the 70% width
+
+## Placement of content in Rows (Custom palcement):
+
+`Starting Postion of Contents`:
+
+`row-start-1`: The content/items will be placed on the first available row on the web page.
+`row-start-2`: The content/items will be placed on the second available row on the web page.
+
+`Ending Postion of Contents`:
+
+`row-end-2`: It means that limiting the content till the `first row only`(end-2 means second row is not included).
+
+`row-end-3`: It means that limiting the content till the `second row` (end-3 means third row is not included).
+
+## Row Spaning
+
+`rows-span-1`: This will spread your content into one row only.
+`rows-span-2`: This will spread your content starting from first and utill the second row.

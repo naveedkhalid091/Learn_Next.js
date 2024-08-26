@@ -1,47 +1,70 @@
-## Grid Columns
+## Creating Columns in Grid (auto sizing):
 
-The utilities `grid-cols-*` is used to specify how many columns you need and of what size each:
+The utilities `grid-cols-*` is used to specify how many columns you need on a web page with the size of each column.
 
-## utlities of creating columns
+`For Example`
 
-`grid-cols-1`: Creates one grid column occupying full width of the container
-`grid-cols-2`: Creates two grid columns occupying 50% width each
-`grid-cols-3 `: Creates three grid columns occupying 33.33% width each:
+`grid-cols-1`: creates one column with 100% width on a web page.
+`grid-cols-2`: creates two columns with 50% width of each web page.
+`grid-cols-3`: creates three columns with 33.34% width of each web page.
 
 You can use utilities from `grid-cols-1` until
 `grid-cols-12` (It means grid has maximum of 12 columns).
 
-Using `grid-cols-2` in a grid layout doesn't limit you to only having two elements(vertically). Instead, it divides the available page space into two equal columns. If you have more than two elements, the additional content will flow into the next row, with each row containing two elements within those columns.
+`For Example`:
 
-`custom setting`
-Sometimes we need grid columns with `unequal widths or custom setting of grid`, this can be achived as :
+Using `grid-cols-2` All the written content on a web page will fix into two columns.
 
-add custom settings insdie the []:
+## Creating columns in a web page (custom sizing)
 
-<div className=grid-cols-[40%,60%]>
+<div className=grid-cols-[30%,70%]>
         <p>----</p>
 </div>
 
-The above code means that the div has two columns one with 40% width while the other's width is 60%.
+The above code will split a web page into two columns one with 30% width while the other with the 70% width
 
-You can also `create sidebar` using this split method.
+`Note:` Using Above costom method you can create sidebar and the main page.
 
-## Utilities for Controlling Element Placement in Grid Columns:
+## Placement of content in columns (Custom palcement):
 
-The elements will be auto adjusted or placed into the created columns according to the default settings but If you want to adjust customly then you can use following utilities.
+`Starting Postion of Contents`:
 
-`col-start-1`: The element will be placed into first column.
-`col-start-2`: The element will be placed into the second column.
+`col-start-1`: The content/items will be placed on the first available column on the web page.
+`col-start-2`: The content/items will be placed on the second available column on the web page.
 
-If you wanted to span/spread the whole one conent (upper or lower div) unto the other multiple columns then you can use following properties:
+`Ending position of contents`:
 
-`cols-span-1`: This will spread your content into one column
-`cols-span-2`: This will spread your content into two columns.
+`col-end-2`: It means that limiting the content till the `first column only`(end-2 means second column is not included).
 
-## Check the below picture for span reference
+`col-end-3`: It means that limiting the content till the `second column` (end-3 means third column is not included).
+
+## Column Spaning
+
+`cols-span-1`: This will spread your content into one column only
+`cols-span-2`: This will spread your content starting from first and utill the second column.
+
+Image is given below to understand the span concept.
+
+In this Image `Join our community` para is span into two columns.
+In the second image, The grid layout is with 2 columns and three rows. Header and footers are span across the two colunms.
+
+Below is the code to achive the results same as pic:
+
+<div class="container min-h-screen grid grid-cols-[22rem,1fr] grid-rows-[auto,1fr,auto]">
+  <header class="grid col-span-2">
+    <h2>Header</h2>
+  </header>
+  <div class="sidebar">
+    <h2>Sidebar</h2>
+  </div>
+  <div class="main">
+    <h2>Main Content</h2>
+  </div>
+  <footer class="grid col-span-2">
+    <h2>.....</h2>
+  </footer>
+</div>
 
 ![Alt Text](span.png)
 
-Or
-
-## Understanding Column End
+![Alt Text](span2.png)
