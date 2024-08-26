@@ -38,12 +38,10 @@ If you wanted to span/spread the whole one conent (upper or lower div) unto the 
 `cols-span-1`: This will spread your content into one column
 `cols-span-2`: This will spread your content into two columns.
 
-(Look below mentioned ref for cols-span-2 or check the attached picture span.png)
+## (check the below picture span.png for Span ref)
 
 ![Alt Text](span.png)
 
 Or
-
-![Alt Text](https://play.tailwindcss.com/MSKC60Te0R?size=800x600)
 
 ## Understanding Column End
