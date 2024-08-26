@@ -45,3 +45,5 @@ If you wanted to span/spread the whole one conent (upper or lower div) unto the 
 Or
 
 ![Alt Text](https://play.tailwindcss.com/MSKC60Te0R?size=800x600)
+
+Understanding Column End
