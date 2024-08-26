@@ -46,4 +46,4 @@ Or
 
 ![Alt Text](https://play.tailwindcss.com/MSKC60Te0R?size=800x600)
 
-Understanding Column End
+## Understanding Column End
