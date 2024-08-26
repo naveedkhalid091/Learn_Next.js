@@ -1,4 +1,4 @@
-## fraction Unit:
+## fraction Unit(fr):
 
 The `fr` is short for fraction representing fraction of the remaining space:
 
