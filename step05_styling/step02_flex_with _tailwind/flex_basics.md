@@ -7,11 +7,15 @@ There are two weapons in TilwindCss which are called
 
 ## 1. `What is FlexBox`?
 
-Flexbox allows us to create flexible and responsive layouts. When we define an element as a `flex` its childs (flex items) are automatically arranged according to the rules defined in `flex` as a parent.
+Flex is a one dimensional layout setting system.
 
-Creating a flex container.
+It is best to use flex for simpler layouts where alignment is in one direction, it aligns items along a single axis (row or column).
 
-To make an element a `flex container`, you apply the `flex` property to it. This changes the behavior of the container and its child elements.
+When we define an element as a `flex` its childs (flex items) are automatically arranged according to the rules defined in `flex` as a parent.
+
+## Creating a flex container.
+
+To make an element a `flex container`, you write the `flex` property into a parent element i.e. <div className="grid">. This mentioning will make all the nested childs the 'flex items or elements'. These `flex items` will then follow the `flex layout rules` defined by the parent.
 
 For Example:
 
@@ -22,7 +26,7 @@ For Example:
 </div>
 
 In this example, the <div> with the class flex is the flex container, and the three child <div> elements (Item 1, Item 2, Item 3) are the flex items.
-Only the immediate child elements of th container becomes flex items. Childrens of `flex items` are not affected.
+Only the immediate child elements of the container becomes flex items. Childrens of `flex items` are not affected.
 
 `Note`: if you wanted to use the below flex utilities then first you have to write `flex` and then write below utilities. If you will not follow this pattren then flex properties will not work.\***\*\*\*\*\*\*\***\*\*\***\*\*\*\*\*\*\***\_\***\*\*\*\*\*\*\***\*\*\***\*\*\*\*\*\*\***
 
@@ -48,6 +52,8 @@ The properties are mentioned below:
 ii).`align-items`:
 
 `align-items`: Use this property `to Manage the distances` in accordance to align the cross axis (vertical in a row, horizontal in a column).
+
+Note: Only Single line content or item is managed in this method, the multiline content will be managed in `align content` method which we will discuss later on.
 
 `items-start`: Aligns items to the start of the cross axis.
 `items-end`: Aligns items to the end of the cross axis.
