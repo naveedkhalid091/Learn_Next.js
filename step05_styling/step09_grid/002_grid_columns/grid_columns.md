@@ -38,7 +38,7 @@ If you wanted to span/spread the whole one conent (upper or lower div) unto the 
 `cols-span-1`: This will spread your content into one column
 `cols-span-2`: This will spread your content into two columns.
 
-## (check the below picture span.png for Span ref)
+## (check the below picture for span ref)
 
 ![Alt Text](span.png)
 
