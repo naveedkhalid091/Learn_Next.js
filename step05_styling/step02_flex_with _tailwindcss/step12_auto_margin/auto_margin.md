@@ -37,12 +37,7 @@ Properties of `auto` margins are given below:
 
 For Example: In the footer you only need one (second) element at right while other at left side then following code will help:
 
-<footer className=flex>
-<div className="footer-col">Item 1</div>
-<div className="footer-col ml-auto">Item 2</div>
-<div className="footer-col">Item 3</div>
-<div className="footer-col">Item 4</div>
-</footer>
+`className="footer-col ml-auto"`
 
 `Without flex`: Auto margins work based on block-level layout.They can be used for horizontal centering (mx-auto) or pushing elements to the sides (ml-auto, mr-auto).
 

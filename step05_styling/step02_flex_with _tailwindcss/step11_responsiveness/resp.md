@@ -31,13 +31,9 @@ These special tags can be used in following situations: with examples are given 
     1.1) Responsive Text Size:
 
 For Example:
+`class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl"`
 
-   <h1 class="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
-    Responsive Heading
-   </h1>
-
-    Where:
-
+Where:
 `text-base`: Default size (on very small screens).
 `sm:text-lg`: Larger text on small screens (640px and up).
 `md:text-xl`: Even larger text on medium screens (768px and up).
@@ -50,35 +46,31 @@ For Example:
 
 For Example:
 
-<div class="p-4 sm:p-6 lg:p-10">
-Content inside the box
-</div>
+`class="p-4 sm:p-6 lg:p-10"`
 
-    Where:
-
+Where:
 `p-4:` All screens get a bit of padding (16px).
 `sm:p-6:` When the screen is at least 640px wide, increase the padding to 24px.
 `lg:p-10:` When the screen is at least 1024px wide, increase the padding to 40px.
 
 1.3) Responsive Images:
-
 Use the `w-full` class to make images responsive.
+
 For Example:
-<img src="image.jpg" class="w-full h-auto" alt="Responsive Image">
+`class="w-full h-auto"`
 
 Where:
 `w-full`: Image takes up the full width of its container.
 `h-auto`: Height adjusts proportionally to the width.
 
-    1.4) Responsive display of elements:
-     Control visibility of elements on different screen sizes.
+1.4) Responsive display of elements:
+Control visibility of elements on different screen sizes.
 
 For Example:
 
-<div class="hidden md:block">
-<!-- This content is hidden on small screens but visible on medium screens and larger -->
+`class="hidden md:block"`
 
-   </div>
+<!-- writting hidden will cause the content to be hidden on small screens but visible on medium screens and larger -->
 
 where:
 `hidden`: Hide on all screens.
@@ -98,9 +90,7 @@ For Example:
 
 For Example:
 
-<button class="text-gray-700 hover:text-blue-500 focus:text-red-500">
-  Responsive Button
-</button>
+`class="text-gray-700 hover:text-blue-500 focus:text-red-500"`
 
 Where:
 `text-gray-700`: Default text color.
