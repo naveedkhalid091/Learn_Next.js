@@ -4,11 +4,7 @@ Us the `order` utlitity if you need to change the order of elements.
 
 For Example:
 
-<div> 
-<img src='' className='order-last'/>
-<img src='' className=''/>
-<img src='' className=''/>
-</div>
+`className='flex order-last`
 
 Order property is also used in flex item and the value can be any number positive or negative. The item with the greater order value will appear later while the lesser value order will aprear first.
 
