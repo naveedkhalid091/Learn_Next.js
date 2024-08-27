@@ -17,9 +17,7 @@ Using `grid-cols-2` All the written content on a web page will fix into two colu
 
 ## Creating columns in a web page (custom sizing)
 
-<div className=grid-cols-[30%,70%]>
-        <p>----</p>
-</div>
+`className= grid grid-cols-[30%,70%]`
 
 The above code will split a web page into two columns one with 30% width while the other with the 70% width
 
@@ -40,8 +38,8 @@ The above code will split a web page into two columns one with 30% width while t
 
 ## Column Spaning
 
-`cols-span-1`: This will spread your content into one column only
-`cols-span-2`: This will spread your content starting from first and utill the second column.
+`col-span-1`: This will spread your content into one column only
+`col-span-2`: This will spread your content starting from first and utill the second column.
 
 Image is given below to understand the span concept.
 
