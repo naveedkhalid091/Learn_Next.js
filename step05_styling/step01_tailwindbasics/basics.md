@@ -2,15 +2,15 @@ Read `Chapter # 2` from `Modren CSS with Tailwind` second Edition Flexible styli
 
 We will discuss:
 
-#### 1) `Installation of TailwindCss`
+1.  `Installation of TailwindCss`
 
-#### 2) `Types of Styling and their preferences:`
+2.  `Types of Styling and their preferences:`
 
-#### 3) `Examples of Using `Utility Class` Styling in Tailwind:`
+3.  `Examples of Using `Utility Class` Styling in Tailwind:`
 
-#### 4) `Examples of Using `external` Styling in Tailwind:`
+4.  `Examples of Using `external` Styling in Tailwind:`
 
-#### 5) `Directives`
+5.  `Directives`
 
 ## 1) `Installation of TailwindCss:`
 
