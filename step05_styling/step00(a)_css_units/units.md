@@ -30,12 +30,12 @@ If you have a parent div that is 400px wide, and you set a child div inside it t
 
 Unlike `px`, which is a fixed size, `%` is relative. This means that if the parent element changes size the child element’s size (in %) will change accordingly.
 
-### usage of % in child elements`
+#### usage of % in child elements`
 
 Parent div: `className="100px bg-gray-200"`
 Child div: `className="w-[50%] bg-blue-500 text-white" `
 
-### usage of % in Parent elements and child`
+#### usage of % in Parent elements and child`
 
 If you wanted to make both the parent and child elements responsive then you can also write % in both elments (parent and child). e.g
 
