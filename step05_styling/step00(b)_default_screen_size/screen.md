@@ -27,9 +27,10 @@ You will learn about elements' padding, margin, column and rows further in upcom
 Take up only as much width as needed and flow horizontally:
 
 Below elements are inline elements:
-image tag and other self closing tags.
-input tag
-button tag
+
+Image tag and other self closing tags.
+Input tag
+Button tag
 
 #### Exmaples :
 
