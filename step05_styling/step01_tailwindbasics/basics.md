@@ -26,7 +26,7 @@ iii)` External styling:`
 
 Above mentioned methods are the traditional methods in CSS.
 
-## `utility class`
+## `Utility classes`
 
 We normally put `keys and values` in CSS inline styling method but in TailwindCss we only write the `pre-defined utility class` directly in the `className` attribute.
 For Example:
