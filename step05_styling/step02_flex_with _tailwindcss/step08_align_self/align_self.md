@@ -20,4 +20,4 @@ Below is the image and if you wanted to display button at right side then you ca
 
 `class="self-end"`
 
-![Alt text](<img src="https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300" alt="" />)
+![Alt text](https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300)
