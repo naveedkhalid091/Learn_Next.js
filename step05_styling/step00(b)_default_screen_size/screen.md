@@ -28,11 +28,11 @@ Take up only as much width as needed and flow horizontally:
 
 Below elements are inline elements:
 
-Image tag and other self closing tags
+`Image tag and other self closing tags`
 
-Input tag
+`Input tag`
 
-Button tag
+`Button tag`
 
 #### Exmaples :
 
