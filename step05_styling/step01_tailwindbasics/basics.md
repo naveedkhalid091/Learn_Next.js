@@ -18,11 +18,11 @@ The TailwindCSS automatically installed when create the `Next.js` project.
 
 ## 2) `Types of Styling and their preferences:`
 
-#### i) `Internal styling:`
+i) `Internal styling:`
 
-#### ii) `Inline styling:`
+ii) `Inline styling:`
 
-#### iii)` External styling:`
+iii)` External styling:`
 
 Above mentioned methods are the traditional methods in CSS.
 
