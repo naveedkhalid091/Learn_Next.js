@@ -17,11 +17,5 @@ Suppose there is a card component with utility
 
 Below is the code to achive the result.
 
-<div class="container grid grid-col">
-  
-  <img src="https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=300" alt="" />
-  <span>$220</span>
-  <h3>Comfort Grey Sneakers</h3>
-  <p>The Sneakers you like most</p>
-  <button class="self-end">Add to Cart</button>
-</div>
+Parent tag: `class="container grid grid-col"`
+Child tag: `class="self-end"`

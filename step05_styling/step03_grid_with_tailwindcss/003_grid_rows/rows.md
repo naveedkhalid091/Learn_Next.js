@@ -14,20 +14,18 @@ Using `grid-rows-2` All the written content on a web page will be fixed into two
 
 ## Creating rows in a web page (custom sizing)
 
-<div className=grid-rows-[30%,70%]>
-        <p>----</p>
-</div>
+div tag: `className=grid-rows-[30%,70%]`
 
 The above code will split a web page into two rows one with 30% width while the other with the 70% width
 
 ## Placement of content in Rows (Custom palcement):
 
-`Starting Postion of Contents`:
+#### Starting Postion of Contents:
 
 `row-start-1`: The content/items will be placed on the first available row on the web page.
 `row-start-2`: The content/items will be placed on the second available row on the web page.
 
-`Ending Postion of Contents`:
+#### Ending Postion of Contents:
 
 `row-end-2`: It means that limiting the content till the `first row only`(end-2 means second row is not included).
 

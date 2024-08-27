@@ -4,12 +4,17 @@ This utility is very rarely used in real world.
 
 The utilities of `Align content` are given below:
 
-content-start:
-content-end:
-content-center:
-content-between:
-content-around:
-content-evenly:
+`content-start:`
+
+`content-end:`
+
+`content-center:`
+
+`content-between:`
+
+`content-around:`
+
+`content-evenly:`
 
 Use Cases:
 Use it when managing the alignment of multiple rows or columns within a flex or grid container.

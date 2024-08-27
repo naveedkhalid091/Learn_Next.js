@@ -8,15 +8,10 @@ When we define an element as a `grid` its childs (grid items) are automatically 
 
 ## Creating a Grid container.
 
-To make an element a `grid container`, you write the `grid` property into a parent element i.e. <div className="grid">. This mentioning will make all the childs the 'grid items or elements'. These grid items will then follow the grid layout rules defined by the parent.
+To make an element a `grid container`, you write the `grid` property into a parent element i.e. `className="grid"`. This mentioning will make all the childs the 'grid items or elements'. These grid items will then follow the grid layout rules defined by the parent.
 
 For Example:
 
-<div class="grid">   
-    <div>Item 1</div>
-    <div>Item 2</div>
-    <div>Item 3</div>
-</div>
+`class="grid"`
 
-In this example, the <div> with the class `grid` is the grid container, and the `three child <div>` elements (Item 1, Item 2, Item 3) are `the grid items`.
-Only the immediate child elements of the container becomes grid items. Childrens of `grid items` are not affected.
+In this example, the div with the class `grid` is the grid container, and the `child divs` witll be `the grid items`. Only the immediate child elements of the container becomes grid items. Childrens of `grid items` are not affected.

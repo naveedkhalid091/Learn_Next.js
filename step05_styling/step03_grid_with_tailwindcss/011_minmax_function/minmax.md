@@ -4,7 +4,7 @@
 
 for Example:
 
-<div className="grid minmax(100px,1fr)">
+`className="grid minmax(100px,1fr)"`
 
 `100px`: This is the minimum size that a grid column (or row) can be. No matter how small the container gets, each column will always be at least 100 pixels wide.
 

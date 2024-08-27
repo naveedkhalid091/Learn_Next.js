@@ -7,7 +7,9 @@ This can be either horizontally (if the flex direction is row) or vertically (if
 
 It `does not affect the distance of the cross-axis` (perpendicular to the main axis).
 
-`justify-content in Grid` Layout is indeed used to adjust the space within the grid container, but it operates differently compared to Flexbox.
+#### `justify-content in Grid`
+
+Layout is indeed used to adjust the space within the grid container, but it operates differently compared to Flexbox.
 
 Utilities of justify-content are:
 

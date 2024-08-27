@@ -48,20 +48,9 @@ In the second image, The grid layout is with 2 columns and three rows. Header an
 
 Below is the code to achive the results same as pic:
 
-<div class="container min-h-screen grid grid-cols-[22rem,1fr] grid-rows-[auto,1fr,auto]">
-  <header class="grid col-span-2">
-    <h2>Header</h2>
-  </header>
-  <div class="sidebar">
-    <h2>Sidebar</h2>
-  </div>
-  <div class="main">
-    <h2>Main Content</h2>
-  </div>
-  <footer class="grid col-span-2">
-    <h2>.....</h2>
-  </footer>
-</div>
+parent element:`class="container min-h-screen grid grid-cols-[22rem,1fr] grid-rows-[auto,1fr,auto]`
+Header element: `class="grid col-span-2"`
+Footer element: `class="grid col-span-2"`
 
 ![Alt Text](span.png)
 

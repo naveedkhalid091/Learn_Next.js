@@ -11,6 +11,8 @@ But it might be confusing for some people, lets simply this process though `orde
 
 You can simply adjust the order of elements as:
 
-order-first
-order-last
-order-none etc.
+`order-first`
+
+`order-last`
+
+`order-none etc.`
