@@ -125,12 +125,15 @@ z-{index}: Z-index value (e.g., z-10)
 ## 4) Examples of external styling in TailwindCss.
 
 .btn-primary {
-@apply bg-blue-500 text-white py-2 px-4 rounded;
+`@apply` bg-blue-500 text-white py-2 px-4 rounded;
 }
 
 ## 5) Directives
 
-Following directives are available in the styles.css which must not be removed
+Following directives are available in the styles.css which must not be removed:
+
 `@tailwind base`; - This class restrict HTML/CSS styling.
+
 `@tailwind utilities`; Works by applying specific utility classes directly in HTML,
+
 `@tailwind components`; It consolidates multiple utility classes into one class.
