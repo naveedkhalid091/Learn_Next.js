@@ -1,8 +1,10 @@
-import React from 'react'
+import React from "react";
+import { blogs } from "@/constants";
 
-export default function BlogDetail({params}:{params:{blogdetail:string}}) {
-  console.log("params",params.blogdetail)
-  return (
-    <div>Blog Details</div>
-  )
+export default function BlogDetail({
+  params,
+}: {
+  params: { blogdetail: string };
+}) {
+  return <main> Detail Page</main>;
 }
