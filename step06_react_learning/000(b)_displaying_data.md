@@ -20,6 +20,6 @@ Code Example:
 
 When setting attributes like className or src in JSX, you can use either quotes or curly braces:
 
-\*Use quotes for plain strings, e.g., className="avatar"
+- Use quotes for plain strings, e.g., className="avatar"
 
-- Use curly braces for JavaScript expressions, e.g., src={user.imageUrl}
+* Use curly braces for JavaScript expressions, e.g., src={user.imageUrl}
