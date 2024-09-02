@@ -45,4 +45,4 @@ We only want it to run when the user actually clicks the button, so this is the 
 
 ## Use Case of event handler:
 
-Imagine we have a form, and you want to submit the form when a user clicks a button. You would create a handleSubmit function as an event handler and attach it to the button's onClick event.
+Imagine we have a form, and you want to submit the form when a user clicks a button. You would create a handleSubmit function as an event handler and attach it to the button's `onClick` event.
