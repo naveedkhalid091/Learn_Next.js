@@ -6,7 +6,7 @@ function UseState() {
   const [value, setValue] = useState(0);
 
   const increament = () => {
-    setValue(value + 1);
+    setValue(value + 1;
   };
   const decreament = () => {
     setValue(value - 1);
