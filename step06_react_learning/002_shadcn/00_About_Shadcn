@@ -1,0 +1,86 @@
+## What is Shadcn?
+
+It open source library built with tailwind and React.
+
+This is NOT a component library. It's a collection of re-usable components that you can copy and paste into your apps.
+
+The library offers a range of built-in components, such as buttons, forms, modals, and more, to help developers build aesthetically pleasing and functional user interfaces efficiently.
+
+#### How to use the components of Shadcn in your project?
+
+1. Run the init command to create a new Next.js project or to setup an existing one:
+
+command for pnpm:
+`pnpm dlx shadcn@latest init`
+command for npm:
+`npx shadcn@latest init`
+command for yarn:
+`npx shadcn@latest init`
+
+After above command, Shadcn will begin installation into your project and will ask prompt questions as it ask in installing the Next.js project.
+
+Common questions will be:
+
+1. `Which style would you like to use?` You should select `NewYork`.
+2. `Which color would you like to use as the base color` You can shoose any but first time I have selected `slate`.
+3. Would you like to use CSS variables for theming? Select `yes`.
+
+After that you would be able to use the Shadcn UI.
+
+## For Example:
+
+I am now copying the code from Shadcn Ui and pasting it inside the project.
+
+To add Shadcn UI button in your app.
+
+Write below command inside your project directory:
+`pnpm dlx shadcn@latest add button`
+
+The above command will make a folder called `components` inside the source directory and inside the components `ui` folder will be made automatically.
+All the Shadcn components will be available inside the `ui` folder whenever you will use them.
+
+As we have now mentioned the below command:
+
+`pnpm dlx shadcn@latest add button`
+
+so the `button.tsx` file is available inside the `ui` folder. you can check it.
+
+To use this button now we can import it in our project.
+
+as `import { Button } from "@/components/ui/button"`
+
+See coding Exmaple inside the `01_shadcn` project.
+
+## Changing the Shadcn Components.
+
+We can also update (remove or Add styles) the predifined styles/variants of Shadcn UI components.
+
+Below are two examples, the first one will tell you, how you can change the styles of a component within the styles set by the shadcn UI.
+
+While the second example will explain how you can add your own styles inside the Shadcn components.
+
+##### Example:
+
+Until now we have used `Shadcn` Button in our example so lets carry-on on this Button example.
+
+First go inside the `components/ui/button.tsx`, you will see different style and size variant are pre-defined by the Shadcn UI.
+
+To use that variants, write the variant props inside your button like below:
+
+     <Button variant=""> Shadcn UI Button</Button>
+
+IntelliSense will automatically give you suggestions about the style versions available in a button.
+
+##### Example-2:
+
+Inside the `variants` of `Button.tsx`, you can define your own properties/styles of a button and use it.
+
+Suppose :
+
+`myself:" px-1 my-4 bg-blue-500 rounded hover:text-lg hover:bg-blue-300"`,
+
+Write above mentioned `myself` property inside the pre-build variants of Shadcn UI button inside the `button.tsx` file and use it in a page where you have added button as
+
+    <Button variant="myself"> Shadcn UI Button</Button>
+
+This was all about isntalation and usage of components.
