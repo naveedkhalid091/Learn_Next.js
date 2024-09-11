@@ -1,1 +1,1 @@
-## <Suspense>:
+## `<Suspense>`:
