@@ -1,4 +1,4 @@
-import FileterProductTable from "@/components/ui/filterProductTable";
+import FileterProductTable from "@/components/ui/FilterProductTable";
 
 export default function Home() {
   return (
