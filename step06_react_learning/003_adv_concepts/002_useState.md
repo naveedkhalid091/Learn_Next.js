@@ -1,4 +1,31 @@
-## Updating the Screen:
+## UseState():
+
+useState is a fundamental hook that lets you add state to the functional components. It returns an array with two elements.
+
+1. The current state value
+2. A function to update the value
+
+Use Cases:
+
+1. `Track UI elements`: control visibility of model dialogs or dropdowns.
+2. `Managing Form Inputs`: Track and update user inputs in forms.
+
+Code Example:
+
+    function counter(){
+    const [count,setcount]=useState(0);
+    return(
+
+    <div>
+     <p>You Clicked {count} Times</p>
+       <button onClick={()=>setcount(count+1)}>
+          Click me
+       </button>
+    <div>
+    )
+    }
+
+#### Updating the Screen:
 
 When you're building a React component, sometimes you want from that part component to `remember` some information and show it on the screen.
 
