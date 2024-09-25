@@ -5,9 +5,35 @@ export default function Home() {
     <div>
       Home Page
       <br />
-      <Link href="./static">Static page</Link>
       <br />
-      <Link href="./server">Server Page</Link>
+      <Link className="text-blue-500" href="./server-static">
+        Server side Static rendering{" "}
+      </Link>
+      <br />
+      <br />
+      <Link className="text-blue-500" href="./server-dynamic">
+        Server side dynamic rendering
+      </Link>
+      <br />
+      <br />
+      <Link className="text-blue-500" href="./client">
+        Client rendering using Hooks
+      </Link>
+      <br />
+      <br />
+      <Link className="text-blue-500" href="./client2">
+        Client rendering using SWR
+      </Link>
+      <br />
+      <br />
+      <Link className="text-blue-500" href="./parallel-display">
+        Parallel rendering of two or more APIs
+      </Link>
+      <br />
+      <br />
+      <Link className="text-blue-500" href="./sequential-display">
+        Sequential rendering of two or more APIs
+      </Link>
     </div>
   );
 }
