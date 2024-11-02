@@ -12,11 +12,13 @@ For example, instead of repeating validation logic across multiple input fields,
 
 1. Install the Zod library `pnpm install zod`
 2. Install the hookform/resolvers/zod as: `pnpm install zod @hookform/resolvers`
-3. import `zod` in your project as:
-4. import `{ zodResolver }` from `"@hookform/resolvers/zod"`;
-5. Define schemas of your form and finally apply schema.
+3. Import `zod` in your project as:
+4. Import `{ zodResolver }` from `"@hookform/resolvers/zod"`;
+5. Create a `lib` (library) folder and or it will be available when you will install the `shadcn UI` and then create an another folder called `validation` inside the `lib` and finally create a file called `schema.ts`.
+6. Wirte all the schemas of login form, singun form inside the schema.ts and then import the relevent schema into the relevent file i.e. `signin` or `signup`.
+7. Use the schema after importing it.
 
-Below is the exmaple of code taken from `Ract-Hook-form` but with an only change of including schema and finally you will notice by comparing both codes before zod and after zod library, and you will conclude that schema has made the developers' life very easy by not writting the same validation rules again and again.
+Below is the exmaple of code taken from `Ract-Hook-form` but with an only change of including schema `(Here I have not created a seperate schema file for the code visibility purpose but you are recommended to create a seperate schema file in real life projects)`. You will notice by comparing both codes before `zod` and after `zod` library and you will conclude that schema has made the developers' life very easy by not writting the same validation rules again and again.
 
             "use client";
             import { useForm } from "react-hook-form";

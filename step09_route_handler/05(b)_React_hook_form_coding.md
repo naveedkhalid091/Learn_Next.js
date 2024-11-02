@@ -224,3 +224,7 @@ import { useForm } from 'react-hook-form';
          }
 
 Now you are done with setting the basic form rules:
+
+###### Note: Always try to solve error handling with try{}catch{} method.
+
+###### If you are following/watching any other source of dealing the errors then try to follow the pattern being followed inside the youtubevideo because evey method has unique and different implications
