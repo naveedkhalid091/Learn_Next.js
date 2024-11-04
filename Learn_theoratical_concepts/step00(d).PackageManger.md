@@ -21,7 +21,7 @@ If you are not sure which one to install then I have given comparison of these p
 | **Scope**                | Standard for JavaScript   | Popular in JavaScript | Gaining popularity         |
 | **Community**            | Largest community         | Strong community      | Growing community          |
 
-##### Use Cases:
+### Use Cases:
 
 **npm:**
 
