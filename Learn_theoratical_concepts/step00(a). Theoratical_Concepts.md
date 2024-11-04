@@ -4,13 +4,13 @@ This is the first file of Learning Next.js
 
 In this Repository, we will not only Next.js concepts but we will also be exploring the folloiwng libraries/tools.
 
-**React.js**
-**TailwindCss**
-**API Testing through PostMan**
-**API development though Router Handlers.**
-**React Hook Form and Zod**
-**Headless CMS**
-**Relational Database concepts Drizzle ORM and Supabase.**
+**React.js**,
+**TailwindCss**,
+**API Testing through PostMan**,
+**API development though Router Handlers.**,
+**React Hook Form and Zod**,
+**Headless CMS**,
+**Relational Database concepts Drizzle ORM and Supabase.**,
 
 ## React Overview (https://react.dev/)
 
