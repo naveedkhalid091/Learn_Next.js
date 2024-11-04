@@ -1,78 +1,68 @@
-## Next.js Project Structure
+# Next.js Project Structure - Summary
 
-It covers top-level: 
-    i) folders
-    ii) files
-    iii) configuration files 
-    iv) routing conventions 
-within the app directory. 
+### Top-Level Folders
 
-## i) Top level Folders: 
+These folders organize code, assets, and structure.
 
-Top-level folders are used to organize your application's code and static assets.
+- **`app`** - Defines the App Router for route-based structures.
+- **`pages`** - Page Router (not covered here).
+- **`public`** - Stores static assets.
+- **`src`** - Optional folder for application source files.
 
-e.g. 
+### Top-Level Files
 
-`app` = App Router.
-`pages` = Pages Router  (We will not study about this).
-`public`= Static Assets to be served.
-`src` = Optional application source folder.
+These files configure app settings, manage dependencies, and define environments.
 
-## ii) Top-Level Files
+- **`next.config.js`** - Configuration for Next.js settings.
+- **`package.json`** - Lists project dependencies and scripts.
+- **`middleware.ts`** - Middleware for handling requests.
+- **`.env` / `.env.local`** - Define environment variables.
+- **`.eslintrc.json`** - ESLint configuration.
+- **`.gitignore`** - Files and folders to ignore in Git.
+- **`next-env.d.ts`** - TypeScript declarations for Next.js.
+- **`tsconfig.json` / `jsconfig.json`** - TypeScript and JavaScript configurations.
 
-Top-level files are used to configure your, application, manage dependencies, Run Middleware, integrate monitoring tools, define environment variables
+### App Routing Conventions
 
-e.g. 
+Define routes within the `app` folder.
 
-`next.config.js`  = Configuration file for Next.js.
-`package.json`    =  Project dependencies and scripts.
-`middleware.ts`   = Next.js request middleware
-`.env`            = Environment variables
-`.env.local`      = .env.local
-`.eslintrc.json`  = Configuration file for ESLint. 
-`.gitignore`      = Git files and folders to ignore.
-`next-env.d.ts`   = TypeScript declaration file for Next.js.
-`tsconfig.json`   = Configuration file for TypeScript.
-`jsconfig.json`   = Configuration file for JavaScript.
+- **`layout.tsx`** - Layout for pages.
+- **`page.tsx`** - Main UI for a page.
+- **`loading.tsx`** - Loading screen UI.
+- **`not-found.tsx`** - Not found UI.
+- **`error.tsx`** - Page-level error UI.
+- **`global-error.tsx`** - Global error handling UI.
+- **`route.tsx`** - API route handler.
+- **`template.tsx`** - Layout that re-renders on update.
+- **`default.tsx`** - Fallback for parallel routes.
 
+### Nested Routes
 
-`app Routing Conventions or (Routing standard practices).` 
+Set up nested structures by creating subfolders.
 
-The following files are used to define routes in the `app` router.
+- **`folder`** - Basic route segment.
+- **`folder/folder`** - Nested segment.
 
-`layout.tsx`       =  Layout
-`page.tsx`         =  Page UI
-`loading.tsx`      =  Loading UI
-`not-found.tsx`    =  Not found UI
-`error.tsx`        =  Error UI
-`global-error.tsx` =  Global Error UI
-`route.tsx`        =  API endpoint 
-`template.tsx`     =  Re-rendered layout
-`default.tsx`      =  Parallel route fallback page.
+### Dynamic Routes
 
+Create dynamic and catch-all routes.
 
-## Nested Routes 
-	
-`folder`        = Route segment
-`folder/folder`	= Nested route segment
+- **`[folder]`** - Dynamic route.
+- **`[...folder]`** - Catch-all route.
+- **`[[...folder]]`** - Optional catch-all route.
 
-## Dynamic Routes
+### Route Groups and Private Folders
 
-[folder]	Dynamic route segment
-[...folder]	Catch-all route segment
-[[...folder]]	Optional catch-all route segment
+Organize routes and exclude folders from routing.
 
-## Route Groups and Private Folders
+- **`(folder)`** - Groups routes without affecting routing structure.
+- **`_folder`** - Excludes folder and its children from routing.
 
-(folder)	= Group routes without affecting routing.
-_folder	    = Opt folder and all child segments out of routing.
+### Parallel and Intercepted Routes
 
+Define alternative or intercepted routes within different segments.
 
-## Parallel and Intercepted Routes
-
-	
-@folder	       =  Named slot
-(.)folder      =  Intercept same level
-(..)folder	   =  Intercept one level above
-(..)(..)folder =  Intercept two levels above
-(...)folder	   =  Intercept from root
+- **`@folder`** - Defines a named slot for content.
+- **`(.)folder`** - Intercepts at the same level.
+- **`(..)folder`** - Intercepts one level up.
+- **`(...)folder`** - Intercepts all the way from the root level.
