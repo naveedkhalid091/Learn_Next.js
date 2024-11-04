@@ -1,61 +1,50 @@
-## Starting Note:
-If you have learnt content of `2.gettingStarted.md`, then studying this file is relevent.
+## Getting Started with Next.js and Vercel
 
-## Writting HelloWorld or basic content
+#### 1. Editing Your Project:
 
-After running the `npm run dev` you can edit the `page.tsx` to start your project. 
+After running the command npm run dev, you can start editing your Next.js project:
 
- * Editing Page.tsx file. 
+- Open the page.tsx file.
+- Find the <main> section and delete everything inside it.
+- Add the following content:
 
- Hover at the <main> and delete all the content of <main></main>. 
- Create <div>Write your content here</div>. 
+        <div>Write your content here</div>
 
-## Create Account on Vercel. 
+#### 2. Create Account on Vercel.
 
-Go to ` https://vercel.com/ ` and create your vercel account
+To deploy your project for free, follow these steps to create a Vercel account:
 
-###########################`Optional guide for Account creation `######################################
-#######################################################################################################
-Vercel provide you free hosting service of upto 100GB storage. you can launch your Next.js projects upto 100GB without any charges.
+    i). Go to Vercel.
+    ii) Click on Create Account or Continue with GitHub.
+    iii) Follow the prompts and allow Vercel access to your GitHub account.
+    iv) Fill in your information and verify it by clicking the link sent to your email.
 
-Without Vercel, if you wnated to deploy your projects then you need to buy and configure servers first. but here in Vercel, for learning point of view it provides a free of cost server facility. Your domains runs on vercel on vercel server free of cost.  
+Note: If you encounter any issues, you can contact Vercel support at:
 
-Create Signup accout
-Or
-Click on `Continue with Github` 
-Follow the guidlines and allow vercel for Github configurations. 
-Enter your information for verifications. 
-Verify your information by clicking on the the email links etc. 
+    registration@vercel.com
+    support@vercel.com
 
-If in any case you are encountering any error or your Vercel profile is not creating then you are advised to send an Email to the vercel authorities.
+#### 3. Deploying Your Project
 
-Email links are: `registration@vercel.com` & ` support@vercel.com ` 
+To deploy your project on Vercel:
+i) Install the Vercel CLI globally by running:
 
-######################################`Optional guide Ended `##########################################
-#######################################################################################################
+        npm i -g vercel
 
-## Deployment of your Project. 
+ii) Check if Vercel is installed correctly:
 
- i) Write following command in your terminal.
+        vercel -v
 
- `npm i -g vercel` 
- 
-ii) Checking the vercel's version
- ` vercel -v`
+iii) Log in to your Vercel account through the terminal:
 
+        vercel login
 
-iii) After Installation login to your Vercel account from the terminal by writting . 
+iv) Navigate to your Next.js project directory and run the following command to deploy:
 
-` vercel login `
+        vercel
 
-## Deployment to Vercel Cloud
-
-iv) Now go to the Next.js project directory and give the following command to deploy to cloud:
-
-` vercel `
-
-And Finally, answer the Prompt Questions to Deploy your project. 
+v) Follow the prompt questions to complete your deployment.
 
 ## Ending Note:
 
-Now you can read next file. 
+Now you can read next file.

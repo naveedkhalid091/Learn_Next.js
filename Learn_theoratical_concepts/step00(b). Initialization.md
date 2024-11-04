@@ -26,11 +26,9 @@ Verify the following components to ensure proper installation:
 2. **TypeScript:** Ensure tsconfig.json exists in your project.
 3. **ESLint:** Check for .eslintrc.json in the src folder.
 4. **Tailwind CSS:** Verify the presence of tailwind.config.ts and ensure the following imports are in src/globals.css:
-
    @tailwind base;
    @tailwind components;
    @tailwind utilities;
-
 5. **src Folder:** Confirm the src folder exists in your project.
 6. **App Router:** Expand the src folder to check for the app folder (src/app).
 7. **Import Alias:** In tsconfig.json, confirm that the path is set as follows:
