@@ -20,6 +20,10 @@ We will discuss all of these in detail in coming steps
 
 ## Comparison of Flexbox with Grid
 
+In flexbox you can move your items from rows to column or from column to rows but child elements will move in accordance with the direction of parent element's direction.
+
+While in the **Grid**: child elements can be moved with any direction irrespective of the direction of parent element's direction.
+
 **_Analogy:_**
 
 **Using flex,** we would be able to move the parents and child in the same direction.
