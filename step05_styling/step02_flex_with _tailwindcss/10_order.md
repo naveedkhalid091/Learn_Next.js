@@ -1,6 +1,6 @@
 Order utility:
 
-Us the `order` utlitity if you need to change the order of elements.
+Use the `order` utlitity if you need to change the order of elements.
 
 For Example:
 

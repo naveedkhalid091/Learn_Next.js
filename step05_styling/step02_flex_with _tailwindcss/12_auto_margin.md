@@ -1,10 +1,10 @@
 ## Auto Margins in Tailwind CSS
 
-Auto margins in Tailwind CSS are used to center block-level elements (like divs) horizontally within their parent containers.
+Auto margins in Tailwind CSS are used to center block-level elements (like div) horizontally within their parent containers.
 
 ## Question:
 
-`If we have justify-center utility available to center the items then why we are required to use auto margins?`
+**If we have justify-center utility available to center the items then why we are required to use auto margins?`**
 
 ## Answer:
 
