@@ -2,138 +2,56 @@ Read `Chapter # 2` from `Modren CSS with Tailwind` second Edition Flexible styli
 
 We will discuss:
 
-1.  `Installation of TailwindCss`
+1. ## Installation of TailwindCss
 
-2.  `Types of Styling and their preferences:`
+   - TailwindCSS is automatically installed with the creation of a Next.js project.
 
-3.  `Examples of Using `Utility Class` Styling in Tailwind:`
+2. ## Types of Styling and their preferences:
 
-4.  `Examples of Using `external` Styling in Tailwind:`
+   - ### Traditional CSS Styling Types:
 
-5.  `Directives`
+     - 1. **Internal Styling:** CSS written within **style tags** in HTML.
+     - 2. **Inline Styling:** CSS applied directly in the element’s **style attribute**.
+     - 3. **External Styling:** CSS applied from an external .css file.
 
-## 1) `Installation of TailwindCss:`
+   - ### Tailwind Styling types are:
 
-The TailwindCSS automatically installed when create the `Next.js` project.
+   - 1. **Utility Classes:** Instead of keys and values, Tailwind uses pre-defined classes directly in className, simplifying inline styling.
 
-## 2) `Types of Styling and their preferences:`
+     - **Example:**
 
-i) `Internal styling:`
+     ```html
+     <h1 className="bg-white text-left"></h1>
+     ```
 
-ii) `Inline styling:`
+     - **Examples of Using `Utility Class` Styling:**
 
-iii)` External styling:`
+   - **Common Utility Classes:**
 
-Above mentioned methods are the traditional methods in CSS.
+     - **Color:** Background, text, and border colors (e.g., bg-blue-500, text-gray-700, border-red-500).
+     - **Spacing:** Margin and padding (e.g., p-4, m-4, pt-2, pl-4).
+     - **Typography:** Font size, weight, line height (e.g., text-lg, font-bold, leading-tight).
+     - **Layout:** Flex, grid, width, height (e.g., flex, w-1/2, h-12).
+     - **Border:** Width, color, radius (e.g., border, border-2, rounded-full).
+     - **Shadow:** Basic and custom shadows (e.g., shadow-md, shadow-lg).
+     - **Position:** Positioning options and offsets (e.g., relative, absolute, top-0).
+     - **Flexbox/Grid:** Flex direction, alignment, gap (e.g., flex-row, items-center, gap-4).
+     - **Visibility:** Visibility and opacity settings (e.g., visible, hidden, opacity-50).
+     - **Z-Index:** Layer order (e.g., z-10).
 
-## `Utility classes`
+   - 2. **External Styling in TailwindCSS:** Tailwind's `@apply` directive allows for creating custom styles using utility classes in external stylesheets.
 
-We normally put `keys and values` in CSS inline styling method but in TailwindCss we only write the `pre-defined utility class` directly in the `className` attribute.
-For Example:
+        - **Example**
+          global.css file:
 
-`className='bg-white text-left`
+        ```typescript
+        .btn-primary {
+        @apply bg-blue-500 text-white py-2 px-4 rounded;
+        }
+        ```
 
-## `External Styling in tailwindCSS`
-
-If we wanted to use external styling in TailwindCss then through `@apply` derivative we can use the external styling.
-
-`for Example`:
-
-#### .btn-primary {@apply bg-blue-500 text-white py-2 px-4 rounded;} `
-
-## 3) Examples of utility classes in TailwindCss.
-
-#### `Main Utility Classes in Tailwind CSS`
-
-`
-
-#### `Color`:
-
-bg-{color}: Background color (e.g., bg-blue-500)
-text-{color}: Text color (e.g., text-gray-700)
-border-{color}: Border color (e.g., border-red-500)
-
-#### `Spacing`
-
-p-{size}: Padding (e.g., p-4)
-m-{size}: Margin (e.g., m-4)
-pt-{size}: Padding-top (e.g., pt-2)
-pb-{size}: Padding-bottom (e.g., pb-2)
-pl-{size}: Padding-left (e.g., pl-4)
-pr-{size}: Padding-right (e.g., pr-4)
-
-#### `Typography`
-
-text-{size}: Font size (e.g., text-lg)
-font-{weight}: Font weight (e.g., font-bold)
-leading-{size}: Line height (e.g., leading-tight)
-text-{color}: Text color (e.g., text-blue-600)
-
-#### `Layout`
-
-flex: Flexbox display
-grid: Grid display
-block: Block display
-inline: Inline display
-w-{size}: Width (e.g., w-1/2)
-h-{size}: Height (e.g., h-12)
-
-#### `Border`
-
-border: Border width (e.g., border, border-2)
-border-{color}: Border color (e.g., border-gray-400)
-rounded: Border radius (e.g., rounded-md, rounded-full)
-
-#### `Shadow`
-
-shadow: Basic shadow (e.g., shadow-md)
-shadow-{size}: Shadow size (e.g., shadow-lg)
-
-#### `Position`
-
-relative: Relative positioning
-absolute: Absolute positioning
-fixed: Fixed positioning
-top-{size}: Top position (e.g., top-0)
-left-{size}: Left position (e.g., left-0)
-
-#### `Flexbox`
-
-flex-{direction}: Flex direction (e.g., flex-row, flex-col)
-items-{alignment}: Align items (e.g., items-center)
-justify-{content}: Justify content (e.g., justify-between)
-
-#### `Grid`
-
-grid-cols-{number}: Number of columns (e.g., grid-cols-3)
-gap-{size}: Grid gap (e.g., gap-4)
-
-#### `Visibility`
-
-visible: Visible
-invisible: Invisible
-hidden: Hidden
-
-#### `Opacity`
-
-opacity-{level}: Opacity level (e.g., opacity-50)
-
-#### `Z-Index`
-
-z-{index}: Z-index value (e.g., z-10)
-
-## 4) Examples of external styling in TailwindCss.
-
-.btn-primary {
-`@apply` bg-blue-500 text-white py-2 px-4 rounded;
-}
-
-## 5) Directives
-
-Following directives are available in the styles.css which must not be removed:
-
-`@tailwind base`; - This class restrict HTML/CSS styling.
-
-`@tailwind utilities`; Works by applying specific utility classes directly in HTML,
-
-`@tailwind components`; It consolidates multiple utility classes into one class.
+3. ### Directives
+   Key Directives in styles.css:
+   - **@tailwind base:** Sets up the base styling, affecting global HTML/CSS rules.
+   - **@tailwind utilities:** Enables direct utility class usage in HTML.
+   - **@tailwind components:** Allows grouping multiple utility classes into reusable component styles.

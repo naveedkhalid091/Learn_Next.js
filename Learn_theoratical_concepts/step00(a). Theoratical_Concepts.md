@@ -49,7 +49,7 @@ Next.js is a full-featured and full-stack framework to build high-performing web
 
    - **getServerSideProps:** Ensures data is always up-to-date.
 
-   iii) **Client-Side Fetching:** Uses React hooks like useEffect to load data in the browser for user-specific or dynamic data.
+   iii) **Client-Side Fetching:** Uses React hooks like `useEffect` to load data in the browser for user-specific or dynamic data.
 
 5. **CSS Support:** Easily use CSS Modules, Tailwind CSS, and more.
 

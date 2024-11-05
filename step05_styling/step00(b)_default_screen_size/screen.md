@@ -3,23 +3,25 @@
 There are two types of elements in HTML:
 
 1.  Block level elements:
-2.  inline elements:
+2.  Inline elements:
 
 ## Block level elements:
 
-Take up full width and stack vertically
+- Take up full width depending on your screen size.
+-
 
 #### `Default width`:
 
-Without styling the default width is 100% of the parents' element width.
+Without styling and by default, the block-level elements take up the **full width** depending on the screen size and stack vertically (one on top of another).
 
 #### `Default Height`:
 
-The default height is zero without styling`if no content is written but if the content is written then height is only equals to the hight of content.
+- If there is no content, the height will be zero.
+- If content is present, the height adjusts to fit the content.
 
-#### `Arrangment of elements`:
+#### `Arrangement of elements`:
 
-The emelents `stack/arranged vertically`on one and another.`Styling`: The adjustment of height and width of elements can be done in styling.
+**Styling**: The adjustment of height and width of elements can be done in styling.
 You will learn about elements' padding, margin, column and rows further in upcoming topics.
 
 ## 2. Inline elements:
@@ -34,6 +36,6 @@ Below elements are inline elements:
 
 `Button tag`
 
-#### Exmaples :
+#### Examples :
 
 All elements are block level elements other then inline elements.
