@@ -24,6 +24,7 @@ Now lets discuss about the `tailwindcc` file. because you need to change some co
 The `config` object is present inside the `tailiwindcss.config.ts`
 
 The object `config` has three following keys:
+
 i) **content:** Specifies the routes or paths in your project where you want Tailwind CSS to be applied.
 ii)**theme:** The `default styles` of your project are mentioned here. e.g some background images for all the website pages can be used here.
 iii) **plugins**: Lists any third-party libraries you want to use with Tailwind CSS.
