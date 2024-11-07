@@ -1,25 +1,24 @@
 ## Rendering list
 
-#### (Check its code in coding example's section)
-
-In React/Next.js the `rendering list` is the process of displaying an array of data `dynamically`.
+**Displaying an array of data dynamically`**, is called rendering a list in react.
 
 ## How Data is rendered?:
 
-`For example`, let’s say you have an array of products:
+Let’s say you have an array of products:
 
-    const products = [
-
-{ title: 'Cabbage', id: 1 },
-{ title: 'Garlic', id: 2 },
-{ title: 'Apple', id: 3 },
+```typescript
+export const products = [
+  { title: "Cabbage", id: 1 },
+  { title: "Garlic", id: 2 },
+  { title: "Apple", id: 3 },
 ];
+```
 
-You can display above data into any page through `map function` after inporting the `array` page into the required page.
+You can display above data into any page through `map function` after importing the `array` page into the required page.
 
-The map fucntion works same as loops. It is a method of an array.
+The map function is a method of an array, which works same as loops.
 
-The map function i.e `map()` iterate over the array, during each iteration it generates a piece of JSX for each item of the array.
+The **map function i.e `map()`** iterate over the array, during each iteration it generates a piece of JSX/TSX` for each item of the array.
 
 #### `key prop`:
 
@@ -27,17 +26,26 @@ When rendering a list, React requires you to include `a unique key prop` for `ea
 
 #### For Example:
 
-    const listItems = products.map(product =>
-    <li key={product.id}>
-        {product.title}
-    </li>
-    );
+```typescript
+/*File:products.tsx*/
 
-    return (
-    <ul>{listItems}</ul>
-    );
+export const products = [
+  { title: "Cabbage", id: 1 },
+  { title: "Garlic", id: 2 },
+  { title: "Apple", id: 3 },
+];
+```
 
-Notice how `<li>` has a key attribute. For each item in a list, you should pass a string or a number that uniquely identifies that item among its siblings. Usually, a key should be coming from your data, such as a database ID. React uses your keys to know what happened if you later insert, delete, or reorder the items.
+```typescript
+/*File: index.tsx*/
+const listItems = products.map((product) => (
+  <li key={product.id}> {product.title} </li>
+));
+
+return <ul>{listItems}</ul>;
+```
+
+Note that how `<li>` has a key attribute. For each item in a list, you should pass a string or a number that uniquely identifies that item among its siblings. Usually, a key should be coming from your data, such as a database ID. React uses your keys to know what happen if you later insert, delete, or reorder the items.
 
 #### Why the key Prop is Important:
 
@@ -45,6 +53,7 @@ React uses the key prop to track elements between updates. This allows React to 
 
 ## Exmaple 2 with styling impact:
 
+```typescript
 const products = [
 { title: 'Cabbage', isFruit: false, id: 1 },
 { title: 'Garlic', isFruit: false, id: 2 },
@@ -69,3 +78,7 @@ return (
     );
 
 }
+
+**Check its code in coding examples section**
+
+```

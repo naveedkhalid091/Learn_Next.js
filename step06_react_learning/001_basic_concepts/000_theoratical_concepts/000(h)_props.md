@@ -1,24 +1,48 @@
-## What are Props (short for properties)?
+## Understanding Props in React:
 
 The analogy of concepts between the `props` and `attributes` is similar.
 
-In HTML, `attributes are predefined` and can't be customized. However, in React, we can create our own attributes or properties `(called props)` and after creation of props we can use them in other components.
+- In HTML, **attributes are predefined** and can't be customized. However, in React, props are also predefined (like `children`, `key`, `ref` etc.) but props can also be created, we use the props in another components after creating them, particularly from the parent to child
+  elements.
+
+* You can only use these reserved props according to specific rules defined by React. For Example: `key` prop can be used efficiently when re-rendering of lists. and `children` prop is used when you need to render the `page.tsx` content into the layout etc.
+
+* The child component receiving the props cannot modify them directly.
 
 #### Comparison between attributes and props:
 
-- First - In attributes you can only pass string or boolean data types but in props you can pass any data types including arrays, objects and functions.
+- **First:** In **attributes** you can only pass string or Boolean data types but in **props** you can pass any data types including arrays, objects and functions.
+- **Second:** Attributes are pre defined but props are fully customizable.
+- **Third:** Attributes only support the **static data** but props also support the **dynamic data as well the static data**.
 
-- Second - Attributes are pre defined but props are fully customizable.
+### Syntax: Creating and Using Props:
 
-* Third - you can only pass static data into attributes but in props you can also pass the dynamic data.
+Here's how you can create and use props in a React component:
 
-Hence the definition of Props will be as follows:
+```tsx
+// Greeting.tsx
+function Greeting({ name }) {
+  return <h1>Hello, {name}!</h1>;
+}
 
-#### Props definition:
+// Parent.tsx
+<Greeting name="Naveed" />;
+```
 
-In React, props (short for properties) are used to pass data from one component to another, typically from a parent component to a child component.
-The child component receiving the props cannot modify them directly.
+**_Different ways of calling props:_**
 
-React also has certain reserved (predefined) props like `key`, `ref`, and `children`. Developers can only use these reserved props according to specific rules defined by React."
+- using the props inside the element is similar to the attribute as
 
-(See Example in Code 001_coding_examples)
+```tsx
+<h1 name="Naveed" key=" " ref=" ">
+```
+
+- But the children props would be used as:
+
+```tsx
+<div>{ children }<div>;
+```
+
+The reasons of why **_children props_** has different method of calling, are given below:
+
+- The children props is considered a special prop in react because it also renders the nested content inside the `page.tsx`.
