@@ -2,7 +2,8 @@
 
 Click on the [Rapid API](https://rapidapi.com/hub) to visit the Rapid APIs website.
 
-RapidAPI, on the other hand, is indeed a `marketplace` where developers can `discover and connect` to pre-built APIs. It focuses on providing `access to` a large collection of third-party APIs, making it easier for developers to integrate these APIs into their applications.
+- RapidAPI, is a `marketplace` to buy an API. It focuses on providing `access to` a large collection of third-party APIs, making it easier for developers to integrate these APIs into their applications.
+- Rapid API also have some free APIs to use.
 
 ## 3. GitHub APIs
 

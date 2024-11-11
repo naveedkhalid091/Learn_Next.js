@@ -48,4 +48,4 @@ Building a static version requires a lot of typing and no thinking but adding in
 
 To build a static version of your app that renders your data model, you'll want to build components that reuse other components and pass data using props. Props are a way of passing data from parent to child.
 You can either build “top down” by starting with building the components higher up in the hierarchy (like FilterableProductTable) or “bottom up” by working from components lower down (like ProductRow).
-In simpler examples, it's usually easier to go top-down, and on larger projects, it’s easier to go bottom-up.
+In simpler examples, it's usually easier to go top-down, and on larger projects, it's easier to go bottom-up.

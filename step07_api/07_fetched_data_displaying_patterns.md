@@ -1,6 +1,6 @@
 ## Fetched data displaying patterns:
 
-When you have more than one API to fetch in a singal page then you have to decide the dispalying priorities of APIs, which one to display first.
+When you have more than one API to fetch in one page then you have to decide the dispalying priorities of APIs, which one to display first.
 
 There are two methods of displaying data:
 

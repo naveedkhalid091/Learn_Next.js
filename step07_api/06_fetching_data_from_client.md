@@ -19,7 +19,9 @@ Form submissions, search queries, or loading additional content on demand.
 See the project `books-api-app` for coding Exmaples, I have fetched data from client side using two following methods:
 
 1. Fetched data by using Hooks
-2. Fetched data after installing the swr library (ising the swr method).
+2. Fetched data after installing the `swr` library
+
+(see the code inside the books-api-app under folder swr_method).
 
 You can Install the swr library as:
 

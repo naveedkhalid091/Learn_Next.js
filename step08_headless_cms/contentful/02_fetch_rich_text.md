@@ -6,18 +6,24 @@ Suppose you have created the rich text i.e images in your contentful studio.
 
 You can install the library to fetch the rich text, try downloading the library from the following command:
 
-     ` npm i @contentful/rich-text-react-renderer `
+```tsx
+npm i @contentful/rich-text-react-renderer `
+```
 
 After downloading, import this library as:
 
-    ` import { documentToReactComponents } from '@contentful/rich-text-react-renderer' `
+```tsx
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+```
 
 and finally render the rich text as follows:
 
+```tsx
     <div>
     /*Calling the above imported liabrary*/
     {documentToReactComponents(item.fields.articleText)}
     <div>
+```
 
 Note: Any data which contains bold,italic styles are also called rich text and you have to import the above library to render the rich texts.
 

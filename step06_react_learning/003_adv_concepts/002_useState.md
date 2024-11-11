@@ -1,149 +1,121 @@
 ## UseState():
 
-useState is a fundamental hook that lets you add state to the functional components. It returns an array with two elements.
+You can think of **state** as any information in your UI that changes over time, usually triggered by user interaction.
 
-1. The current state value
-2. A function to update the value
+**Use Cases:**
 
-Use Cases:
+You can use **useState()** to:
+**_firstly:_** store the number of user's clicks and **_secondly_** to increment the number of times a user has clicked the button.
 
-1. `Track UI elements`: control visibility of model dialogs or dropdowns.
-2. `Managing Form Inputs`: Track and update user inputs in forms.
+The **_useState()_** returns an array, you can access and use the array values though array destructuring as:
+
+**const [value,setValue] = useState();**
+
+The **first item** in the array is the state value, which is **used to store the values**, while the **_second item_** in the array **is a function to update the value**.
+
+You can name anything to the first and the second items but it's recommended to name these items something descriptive:
 
 Code Example:
 
-    function counter(){
-    const [count,setcount]=useState(0);
-    return(
+```tsx
+    import {useState} from "react";
 
+    export function counter(){
+    const [Likes,setLikes]=useState(0);
+    return(
     <div>
-     <p>You Clicked {count} Times</p>
-       <button onClick={()=>setcount(count+1)}>
-          Click me
+     <p>You Liked {Likes} Times</p>
+       <button onClick={()=>setLikes(Likes+1)}>
+          Likes
        </button>
     <div>
     )
-    }
+}
+```
 
-#### Updating the Screen:
+### Lets understand above code in steps
+
+#### 1. Updating the Screen:
 
 When you're building a React component, sometimes you want from that part component to `remember` some information and show it on the screen.
 
-##### For Example:
-
-You might want to keep track of how many times a button has been clicked.
-
 To acheive this, you need to add `state` into your component.
 
-## How to Add State:
+```tsx
+import {useState} from `react`
+```
 
-#### 1. Import state:
+secondly, declare the state variable.
 
-First you need to import the `state` from react as follows:
-
-      import {useState} from `react`
-
-#### 2. Declare a state variable:
-
-Inside your component you can declare the `state` variable. A `state` variable wil keep the track of for you.
-
-    function MyButton() {
-            const [count, setCount] = useState(0);
-    }
-
-Where:
-`count` is the current state (in this case, how many times the button has been clicked).
-
-`setCount` is the function you use to update `count`.
-
-You can give them any names, but the convention is to write `[something, setSomething]`.
+```tsx
+function MyButton() {
+  const [Likes, setLikes] = useState(0);
+}
+```
 
 The first time the button is displayed, count will be `0` because you passed 0 to `useState()`. When you want to change state, call `setCount()` and pass the new value to it. Clicking this button will increment the counter:
 
-    function MyButton() {
-    const [count, setCount] = useState(0);
+```tsx
+function MyButton() {
+  const [Likes, setLikes] = useState(0);
 
-    function handleClick() {
-        setCount(count + 1);
-    }
+  function handleLikes() {
+    setLikes(Likes + 1);
+  }
 
-    return (
-        <button onClick={handleClick}>
-        Clicked {count} times
-        </button>
-    );
-    }
+  return <button onClick={handleLikes}>Liked {Likes} times</button>;
+}
+```
 
 React will call your component function again. This time, count will be 1. Then it will be 2. And so on.
 
-## Multiple Components:
+## Rendering the same built components multiple times:
 
 If you render the same component multiple times, each will get its own state. Click each button separately:
 
-    import { useState } from 'react';
+```tsx
+import { useState } from "react";
 
-    export default function MyApp() {
-    return (
-
+export default function MyApp() {
+  return (
     <div>
-    <h1>Counters that update separately</h1>
-    <MyButton />
-    <MyButton />
+      <h1>Likes that update separately</h1>
+      <MyButton />
+      <MyButton />
     </div>
-    );
-    }
+  );
+}
+```
 
-function MyButton() {
-const [count, setCount] = useState(0);
+#### Likes that update separately/independently
 
-    function handleClick() {
-        setCount(count + 1);
-    }
+`Liked 0 times`
+`Liked 0 times`
 
-    return (
-        <button onClick={handleClick}>
-        Clicked {count} times
-        </button>
-    );
-    }
-
-#### Counters that update separately/independently
-
-`Clicked 0 times`
-`Clicked 0 times`
-
-Notice how each button “remembers” its own count state and doesn’t affect other buttons.
+Notice how each button “remember” its own count state and doesn’t affect other buttons.
 
 #### Counters that update together:
 
-Sometimes you want buttons to share the same number (or "count") that goes up every time you click either button,
+Sometimes, you want the all available buttons to update together.
 
-In other words you want the all available buttons to update together.
+here is the example to achieve the result:
 
-The Coding example is given below:
+```tsx
+import { useState } from "react";
 
-    import { useState } from 'react';
+export default function MyApp() {
+  const [Likes, setLikes] = useState(0);
 
-    export default function MyApp() {
-    const [count, setCount] = useState(0);
+  function handleLikes() {
+    setCount(Likes + 1);
+  }
 
-    function handleClick() {
-        setCount(count + 1);
-    }
-
-    return (
-        <div>
-        <h1>Counters that update together</h1>
-        <MyButton count={count} onClick={handleClick} />
-        <MyButton count={count} onClick={handleClick} />
-        </div>
-    );
-    }
-
-    function MyButton({ count, onClick }) {
-    return (
-        <button onClick={onClick}>
-        Clicked {count} times
-        </button>
-    );
-    }
+  return (
+    <div>
+      <h1>Likes that update together</h1>
+      <MyButton count={Likes} onClick={handleLikes} />
+      <MyButton count={Likes} onClick={handleLikes} />
+    </div>
+  );
+}
+```

@@ -8,22 +8,27 @@ React doesn't update the state immediately when you change it. It waits until it
 
 See what happens when you click the “+3” button in below code:
 
-    import { useState } from 'react';
+```tsx
+import { useState } from "react";
 
-    export default function Counter() {
-    const [number, setNumber] = useState(0);
-
-    return (
-        <>
-        <h1>{number}</h1>
-        <button onClick={() => {
-            setNumber(number + 1);
-            setNumber(number + 1);
-            setNumber(number + 1);
-        }}>+3</button>
-        </>
-    )
-    }
+export default function Counter() {
+  const [number, setNumber] = useState(0);
+  return (
+    <>
+      <h1>{number}</h1>
+      <button
+        onClick={() => {
+          setNumber(number + 1);
+          setNumber(number + 1);
+          setNumber(number + 1);
+        }}
+      >
+        +3
+      </button>
+    </>
+  );
+}
+```
 
 #### Behavior Explanation:
 
@@ -37,7 +42,7 @@ As you know the javascript is asynchronous language so `onClick` reads the code 
 
 In the provided code:
 
-1. setNumber(number + 1) schedules an update to set number = 1.
+1. setNumber(number + 1) schedule an update to set number = 1.
 2. Before React can re-render, the second setNumber(number + 1) is executed, but it still uses the initial `number = 0`, scheduling another update to set `number = 1` again.
 3. The third setNumber(number + 1) does the same, scheduling the value of `number = 1`.
 
@@ -47,21 +52,27 @@ Thus, even though you are calling setNumber three times, all of them use the sam
 
 Read the below code carfully:
 
-import { useState } from 'react';
+```tsx
+import { useState } from "react";
 
-    export default function Counter() {
-    const [number, setNumber] = useState(0);
+export default function Counter() {
+  const [number, setNumber] = useState(0);
 
-    return (
-        <>
-        <h1>{number}</h1>
-        <button onClick={() => {
-            setNumber(number + 5);
-            alert(number);
-        }}>+5</button>
-        </>
-    )
-    }
+  return (
+    <>
+      <h1>{number}</h1>
+      <button
+        onClick={() => {
+          setNumber(number + 5);
+          alert(number);
+        }}
+      >
+        +5
+      </button>
+    </>
+  );
+}
+```
 
 Now Guess what the `alert` message will show? either 5 or 0?
 
@@ -69,23 +80,29 @@ As we discussed above, the `onclick` function will execute first before renderin
 
 Now Read the Below code carefully for further explaination of snapshot concept:
 
-    import { useState } from 'react';
+```tsx
+import { useState } from "react";
 
-    export default function Counter() {
-    const [number, setNumber] = useState(0);
+export default function Counter() {
+  const [number, setNumber] = useState(0);
 
-    return (
-        <>
-        <h1>{number}</h1>
-        <button onClick={() => {
-            setNumber(number + 5);
-            setTimeout(() => {
+  return (
+    <>
+      <h1>{number}</h1>
+      <button
+        onClick={() => {
+          setNumber(number + 5);
+          setTimeout(() => {
             alert(number);
-            }, 3000);
-        }}>+5</button>
-        </>
-    )
-    }
+          }, 3000);
+        }}
+      >
+        +5
+      </button>
+    </>
+  );
+}
+```
 
 Now Guess what the `alert` message will show? either 5 or 0?
 The answer is: It will still show `0` in an alert message despite of Rendering `5` first.

@@ -8,11 +8,13 @@ Previously we used to apply `if-else` condition to show some message untill `API
 
 You can simple apply fallback plan by placing your main component inside the `<suspense>` element as follows:
 
-    import {suspense} from "rect"
+```tsx
+import {suspense} from "rect"
 
-        <suspense fallback={Loading} />
-            <SomeComponent />
-        </suspense>
+    <suspense fallback={Loading} />
+        <SomeComponent />
+    </suspense>
+```
 
 The above code means, If `<SomeComponent />` is busy in fetching data then in a mean time `<suspense>` will show a loading message as a fallback which is definded in `{loading}`.
 
@@ -21,12 +23,14 @@ The above code means, If `<SomeComponent />` is busy in fetching data then in a 
 By default, the whole tree inside Suspense is treated as a single unit.
 For example, Users will not be able to view data unless all the components are ready to view the content.
 
-    <Suspense fallback={<Loading />}>
-         <Biography />
-      <Panel>
-          <Albums />
-      </Panel>
-    </Suspense>
+```tsx
+<Suspense fallback={<Loading />}>
+  <Biography />
+  <Panel>
+    <Albums />
+  </Panel>
+</Suspense>
+```
 
 Even If `Biography` has fetched the data but `Albums` component is still fetching then Biography will be able to show its content.
 
@@ -36,13 +40,15 @@ For Example:-
 
 import { Suspense } from 'react';
 
-    <Suspense fallback={<BigSpinnerLoading />}>
-        <Biography />
-      <Suspense fallback={<AlbumsGlimmerLoading />}>
-        <Panel>
-            <Albums />
-        </Panel>
-      </Suspense>
-    </Suspense>
+```tsx
+<Suspense fallback={<BigSpinnerLoading />}>
+  <Biography />
+  <Suspense fallback={<AlbumsGlimmerLoading />}>
+    <Panel>
+      <Albums />
+    </Panel>
+  </Suspense>
+</Suspense>
+```
 
 In the above Example we have created nested `<suspense>` which means that `<Biography />` would load the content without waiting for the `<Albums />` to finish the data fetching.

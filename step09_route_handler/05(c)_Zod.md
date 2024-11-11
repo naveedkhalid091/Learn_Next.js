@@ -6,99 +6,104 @@ One key difference between `Zod` and `React Hook Form's` native validation is th
 
 `React Hook Form` is primarily a form management library, and its native validation works well for simple forms. However, when forms grow in complexity or when you want to centralize and reuse validation logic, Zod simplifies the process by allowing you to define and reuse a validation schema.
 
-For example, instead of repeating validation logic across multiple input fields, you can define a Zod schema once and then reference it wherever needed, ensuring consistency and reducing redundancy.
+**For example:** Instead of repeating validation logic across multiple input fields, you can define a Zod schema once and then reference it wherever needed, ensuring consistency and reducing redundancy.
 
 ## How to use the Zod library?
 
 1. Install the Zod library `pnpm install zod`
-2. Install the hookform/resolvers/zod as: `pnpm install zod @hookform/resolvers`
+2. Install the hookform/resolvers/zod as:
+   `pnpm install zod @hookform/resolvers`
 3. Import `zod` in your project as:
-4. Import `{ zodResolver }` from `"@hookform/resolvers/zod"`;
-5. Create a `lib` (library) folder and or it will be available when you will install the `shadcn UI` and then create an another folder called `validation` inside the `lib` and finally create a file called `schema.ts`.
-6. Wirte all the schemas of login form, singun form inside the schema.ts and then import the relevent schema into the relevent file i.e. `signin` or `signup`.
-7. Use the schema after importing it.
+   Import `{ zodResolver }` from `"@hookform/resolvers/zod"`;
 
-Below is the exmaple of code taken from `Ract-Hook-form` but with an only change of including schema `(Here I have not created a seperate schema file for the code visibility purpose but you are recommended to create a seperate schema file in real life projects)`. You will notice by comparing both codes before `zod` and after `zod` library and you will conclude that schema has made the developers' life very easy by not writting the same validation rules again and again.
+4. Create a `lib` (library) folder and or it will be available when you will install the `shadcn UI` and then create an another folder called `validation` inside the `lib` and finally create a file called `schema.ts`.
+5. Wirte all the schemas of login form, singun form inside the `schema.ts` and then import the relevent schema into the relevent file i.e. `signin` or `signup`.
 
-            "use client";
-            import { useForm } from "react-hook-form";
-            import React from "react";
-            import { z } from "zod";
-            import { zodResolver } from "@hookform/resolvers/zod";
+6. Use the schema after importing it.
 
-            const schema = z.object({
-            username: z
-                .string()
-                .min(4, "Write min 4 characters")
-                .max(12, "Write max 12 characters"),
-            email: z.string().email("Must be a valid email"),
-            channel: z
-                .string()
-                .min(3, "Min 3 characters are allowed")
-                .max(15, "Max 15 characters"),
-            });
+Below is the exmaple of code taken from `Ract-Hook-form` but with an only change of including schema **_(Here I have not created a seperate schema file for the code visibility purpose but you are recommended to create a seperate schema file in real life projects)_**. You will notice by comparing both codes before `zod` and after `zod` library and you will conclude that schema has made the developers' life very easy by not writting the same validation rules again and again.
 
-            type FormTypes = z.infer<typeof schema>;
+```tsx
+"use client";
+import { useForm } from "react-hook-form";
+import React from "react";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
 
-            function Zodform() {
-            const form = useForm<FormTypes>({
-                resolver: zodResolver(schema), // Use Zod for validation as a default value
-            });
+const schema = z.object({
+  username: z
+    .string()
+    .min(4, "Write min 4 characters")
+    .max(12, "Write max 12 characters"),
+  email: z.string().email("Must be a valid email"),
+  channel: z
+    .string()
+    .min(3, "Min 3 characters are allowed")
+    .max(15, "Max 15 characters"),
+});
 
-            const {
-                register,
-                handleSubmit,
-                formState: { errors },
-            } = form;
+type FormTypes = z.infer<typeof schema>;
 
-            console.log(errors);
+function Zodform() {
+  const form = useForm<FormTypes>({
+    resolver: zodResolver(schema), // Use Zod for validation as a default value
+  });
 
-            return (
-                <div>
-                <p className="text-blue-500 text-justify">
-                    Below is the concept of React Hook Form with Zod
-                </p>
-                <br />
-                <form
-                    onSubmit={handleSubmit((data) => {
-                    console.log(data); // Data is now type-safe
-                    })}
-                    className="grid mr-auto"
-                >
-                    <label htmlFor="username">Username:</label>
-                    <input
-                    type="text"
-                    id="username"
-                    {...register("username")}
-                    className="border border-gray-300 focus:outline-none focus:border-blue-500 p-2 rounded w-full"
-                    />
-                    {errors.username && (
-                    <p className="text-red-800">{errors.username.message}</p>
-                    )}
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = form;
 
-                    <label htmlFor="email">E-mail:</label>
-                    <input
-                    type="email"
-                    id="email"
-                    {...register("email")}
-                    className="border border-gray-300 focus:outline-none focus:border-blue-500 p-2 rounded w-full"
-                    />
-                    {errors.email && <p className="text-red-800">{errors.email.message}</p>}
+  console.log(errors);
 
-                    <label htmlFor="channel">Channel Name:</label>
-                    <input
-                    type="text"
-                    id="channel"
-                    {...register("channel")}
-                    className="border border-gray-300 focus:outline-none focus:border-blue-500 p-2 rounded w-full"
-                    />
+  return (
+    <div>
+      <p className="text-blue-500 text-justify">
+        Below is the concept of React Hook Form with Zod
+      </p>
+      <br />
+      <form
+        onSubmit={handleSubmit((data) => {
+          console.log(data); // Data is now type-safe
+        })}
+        className="grid mr-auto"
+      >
+        <label htmlFor="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          {...register("username")}
+          className="border border-gray-300 focus:outline-none focus:border-blue-500 p-2 rounded w-full"
+        />
+        {errors.username && (
+          <p className="text-red-800">{errors.username.message}</p>
+        )}
 
-                    <button className="grid hover:bg-fuchsia-300 rounded-br m-3 bg-slate-400">
-                    Submit
-                    </button>
-                </form>
-                </div>
-            );
-            }
+        <label htmlFor="email">E-mail:</label>
+        <input
+          type="email"
+          id="email"
+          {...register("email")}
+          className="border border-gray-300 focus:outline-none focus:border-blue-500 p-2 rounded w-full"
+        />
+        {errors.email && <p className="text-red-800">{errors.email.message}</p>}
 
-            export default Zodform;
+        <label htmlFor="channel">Channel Name:</label>
+        <input
+          type="text"
+          id="channel"
+          {...register("channel")}
+          className="border border-gray-300 focus:outline-none focus:border-blue-500 p-2 rounded w-full"
+        />
+
+        <button className="grid hover:bg-fuchsia-300 rounded-br m-3 bg-slate-400">
+          Submit
+        </button>
+      </form>
+    </div>
+  );
+}
+
+export default Zodform;
+```

@@ -3,7 +3,7 @@ import useSWR from "swr";
 
 /* Books API is not working in client side, there is an issue of API ports, 
 this is why we are using another API endpoint to fetch the data from client side.
-  */
+*/
 
 type Posts = {
   id: number;

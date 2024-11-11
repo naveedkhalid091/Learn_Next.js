@@ -24,7 +24,7 @@ Imagine you’re building a user registration form for an e-commerce website whe
 
 If you choose to trust the user’s input without any validation:
 
-- A user might enter an incorrectly formatted email like user@com instead of a valid email like user@example.com.
+- A user might enter an incorrectly formatted email like `user@com` instead of a valid email like `user@example.com`.
 - A user might make a typo in the Confirm Password field, which doesn’t match the Password field.
 
 * A user could enter a password that is too short or too weak, like 12345, which could compromise their account security.
@@ -56,70 +56,75 @@ Now, let’s see why validation is essential to avoid such issues and how it hel
 
 ###### Coding Example:
 
-        import React from 'react';
-        import { useForm } from 'react-hook-form';
+```tsx
+import React from "react";
+import { useForm } from "react-hook-form";
 
-        function RegistrationForm() {
-        const { register, handleSubmit, formState: { errors } } = useForm();
-        const onSubmit = data => {
-        console.log(data);
-        // Here, we can safely send the data to our backend or database
-        };
+function RegistrationForm() {
+  const {
+    register, // destructuring of register
+    handleSubmit,
+    formState: { errors }, // nested destructuring
+  } = useForm();
 
-        return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-        {/_ Name Field _/}
-        <label>Name:</label>
-        <input
-        {...register("name", { required: "Name is required" })}
-        />
-        {errors.name && <p>{errors.name.message}</p>}
+  const onSubmit = (data) => {
+    console.log(data);
+    // Here, we can safely send the data to our backend or database
+  };
 
-                {/* Email Field */}
-                <label>Email:</label>
-                <input
-                    {...register("email", {
-                    required: "Email is required",
-                    pattern: {
-                        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                        message: "Invalid email address",
-                    }
-                    })}
-                />
-                {errors.email && <p>{errors.email.message}</p>}
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      {/*_ Name Field _*/}
+      <label>Name:</label>
+      <input {...register("name", { required: "Name is required" })} />
+      {errors.name && <p>{errors.name.message}</p>}
 
-                {/* Password Field */}
-                <label>Password:</label>
-                <input
-                    type="password"
-                    {...register("password", {
-                    required: "Password is required",
-                    minLength: {
-                        value: 8,
-                        message: "Password must be at least 8 characters long",
-                    }
-                    })}
-                />
-                {errors.password && <p>{errors.password.message}</p>}
+      {/* Email Field */}
+      <label>Email:</label>
+      <input
+        {...register("email", {
+          required: "Email is required",
+          pattern: {
+            value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+            message: "Invalid email address",
+          },
+        })}
+      />
+      {errors.email && <p>{errors.email.message}</p>}
 
-                {/* Confirm Password Field */}
-                <label>Confirm Password:</label>
-                <input
-                    type="password"
-                    {...register("confirmPassword", {
-                    required: "Please confirm your password",
-                    validate: (value) => value === getValues("password") || "Passwords do not match"
-                    })}
-                />
-                {errors.confirmPassword && <p>{errors.confirmPassword.message}</p>}
+      {/* Password Field */}
+      <label>Password:</label>
+      <input
+        type="password"
+        {...register("password", {
+          required: "Password is required",
+          minLength: {
+            value: 8,
+            message: "Password must be at least 8 characters long",
+          },
+        })}
+      />
+      {errors.password && <p>{errors.password.message}</p>}
 
-                <button type="submit">Register</button>
-                </form>
+      {/* Confirm Password Field */}
+      <label>Confirm Password:</label>
+      <input
+        type="password"
+        {...register("confirmPassword", {
+          required: "Please confirm your password",
+          validate: (value) =>
+            value === getValues("password") || "Passwords do not match",
+        })}
+      />
+      {errors.confirmPassword && <p>{errors.confirmPassword.message}</p>}
 
-        );
-        }
+      <button type="submit">Register</button>
+    </form>
+  );
+}
 
-        export default RegistrationForm;
+export default RegistrationForm;
+```
 
 Note: HTML provides built-in validation features, such as the `required` attribute and input types like email for basic validation but it has some limitations compared to `React Hook form`.
 
@@ -132,16 +137,20 @@ Note: HTML provides built-in validation features, such as the `required` attribu
 
 #### Exmaple:
 
-    <input
-    {...register("email", {
-        required: "Email is required",
-        pattern: {
-        value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-        message: "Invalid email address",
-        },
-    })}
-    />
-    {errors.email && <p>{errors.email.message}</p>}
+```tsx
+<input
+  {...register("email", {
+    required: "Email is required",
+    pattern: {
+      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+      message: "Invalid email address",
+    },
+  })}
+/>;
+{
+  errors.email && <p>{errors.email.message}</p>;
+}
+```
 
 2. Advanced Validation Logic:
 
@@ -151,22 +160,30 @@ Note: HTML provides built-in validation features, such as the `required` attribu
 
 #### Example:
 
-          <input
-          type="password"
-          {...register("password", {
-              required: "Password is required",
-              minLength: { value: 8, message: "Password must be at least 8 characters long" },
-              validate: (value) =>
-              /[A-Z]/.test(value) || "Password must contain at least one uppercase letter",
-          })}
-          />
-          {errors.password && <p>{errors.password.message}</p>}
+```tsx
+<input
+  type="password"
+  {...register("password", {
+    required: "Password is required",
+    minLength: {
+      value: 8,
+      message: "Password must be at least 8 characters long",
+    },
+    validate: (value) =>
+      /[A-Z]/.test(value) ||
+      "Password must contain at least one uppercase letter",
+  })}
+/>;
+{
+  errors.password && <p>{errors.password.message}</p>;
+}
+```
 
 3. Conditional Validation:
 
    - HTML: It is difficult to apply validation that depends on other fields. For example, requiring a "Phone Number" field only if the user selects a certain option (like "Contact me by phone").
 
-   * React Hook Form: Allows dynamic validation, meaning you can apply or remove validation rules based on user interactions.
+   - React Hook Form: Allows dynamic validation, meaning you can apply or remove validation rules based on user interactions.
 
 4. Form Performance:
 

@@ -11,7 +11,7 @@ ii) Sanity
 
 #### Answer:
 
-The need for a headless CMS like Sanity comes from the limitations of hardcoding content directly into the application. Let’s break down why developers choose a headless CMS like Sanity instead of just writing the content and deploying it themselves:
+The need for a headless CMS like Sanity comes from the limitations of hardcoding content directly into the application. Let’s break down why developers choose a headless CMS instead of just writing the content and deploying it themselves:
 
 1. Separation of Content from Code:
 

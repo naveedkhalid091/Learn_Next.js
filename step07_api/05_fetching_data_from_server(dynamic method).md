@@ -20,7 +20,7 @@ Can feel seamless and responsive as users receive updates automatically.
 
 All the code of static and dynamic fetching is same but only one change is required in fetch function which is given below:
 
-    fetch("URL", {cache: "no-store",});
+`fetch("URL", {cache: "no-store",});`
 
 You only add an object {cache: "no-store",} after the URL in fetch function.
 

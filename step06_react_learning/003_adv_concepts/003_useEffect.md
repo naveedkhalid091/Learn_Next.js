@@ -1,73 +1,65 @@
 ## useEffect Hook:
 
+The use of `useEffect()` function is required/mendatory in a case if you need to run another set of code after something has already been fetched or rendered.
+
+or
+
 It is a react hook which is used to handle the `side effects` in your components.
-
-What does `side effects` means?
-
-When you wanted to connect your components with:
-
-1. External systems like (APIs, databases).
-2. Fetching data.
-3. Tracking user clicks or navigation.
-4. Showing live/disconnected users in a chat or application.
-
-You might need to fetch data from any library or through API which is not bound to follow the react guidlines etc. This situation is called `sideEffect`.
-
-React has introduced `useEffect()` to deal with such situations.
 
 The syntax of useEffect is:
 
+```tsx
     useEffect(setup,dependencies?)
 
+    /* e.g `useEffect(()=>{}, [])` */
+```
+
 Where:
-setup is set thourgh an arrow function, while dependencies are written inside an array []
+setup = arrow function as above, `()=>{},` :
+dependencies = are written inside `[]`:
 
-For Example:
+## Use cases of useEffects hook:
 
-    `useEffect(()=>{}, [])`
+**_Examples:_**
 
-    import {useState,useEffect} from 'react'
-        function App(){
-            const [count,setCount]=useState(0)
+**_1. Fetching Data after a Component Loads:_** If you’re loading data from an API (like showing a list of users), useEffect will run the API call once when the component loads.
 
-            function Increament(){
-            setcount(count+1)
-            }
+```tsx
+useEffect(() => {
+  fetch("https://api.example.com/users")
+    .then((response) => response.json())
+    .then((data) => setUsers(data));
+}, []); // Empty dependency array means it runs once, when the component mounts
+```
 
-            function decreament(){
-            setcount(count-1)
-            }
+**_2. Running Code When a Value Changes:_**
+If you want to run some code whenever a specific variable or prop changes (like tracking the user’s selected item), you use useEffect and put that variable in the dependency array.
 
-            useEffect(()=>{
-                alert("Hay welcome to my App")
-                },[])
+```tsx
+useEffect(() => {
+  console.log("User selected:", selectedItem);
+}, [selectedItem]); // Runs whenever selectedItem changes
+```
 
-            useEffect(()=>{
-                alert("Count Changed")
-                },[count])
+**_3. Setting Up Timers, Intervals, or Subscriptions:_**
 
+If you want to set up an interval to a data source (like a real-time stock price feed), use useEffect to start it when the component mounts and clean it up when the component unmounts.
 
+```tsx
+useEffect(() => {
+  const intervalId = setInterval(() => {
+    console.log("This runs every second");
+  }, 1000);
 
-        return(
-        <button Onclick={Increament}>
-           Increament{count}
-        </button>
-        <br/>
-        <button Onclick={decreament}>
-           Decreament {count}
-        </button>
-        )}
+  return () => clearInterval(intervalId); // Clean up when component unmounts
+}, []);
+```
 
-Interpretation of Above Code:
+**_4. Updating the Page Title or Any External State:_**
+If you want to update the browser tab title based on a component state, _`useEffect`_ lets you change it whenever that state changes.
 
-useEffect(()=>{
-alert("Hay welcome to my App")
-},[])
-
-In nbove part of the code don't have any dependancy mentioned inside [], this means alert will show after the data will rendered without any restrictions.
-
-    useEffect(()=>{
-    alert("Hay welcome to my App")
-    },[count])
-
-In the above part of the code, You have linked your state with UseEffect via dependency, as the 'counter` mentioned inside []. This means alert will only show "Count Changed" after the user will click on the button.
+```tsx
+useEffect(() => {
+  document.title = `You clicked ${count} times`;
+}, [count]); // Updates title every time `count` changes
+```

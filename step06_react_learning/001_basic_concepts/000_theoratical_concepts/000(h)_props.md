@@ -31,7 +31,7 @@ function Greeting({ name }) {
 
 **_Different ways of calling props:_**
 
-- using the props inside the element is similar to the attribute as
+- using the props inside the element is similar to the attribute as:
 
 ```tsx
 <h1 name="Naveed" key=" " ref=" ">
@@ -46,3 +46,7 @@ function Greeting({ name }) {
 The reasons of why **_children props_** has different method of calling, are given below:
 
 - The children props is considered a special prop in react because it also renders the nested content inside the `page.tsx`.
+
+The second reason of why {children} props uses the different way is given below:
+
+If you will `console.log` the `props` then you will know that the props prints in object form. so if the props are objects then you can de-structure the pre-built props as well and destructuring is done as `{children}=props`
