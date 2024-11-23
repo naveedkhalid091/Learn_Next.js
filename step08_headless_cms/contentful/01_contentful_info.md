@@ -17,8 +17,8 @@ So initially there are following steps involved:
 ## 1. Creating data into the contentful.
 
 **Step # 1:** - Go to the contentful and signup for free:
-**Step # 2:** - Create a Space and give a descrivptive name like `content is king`
-**Step # 3:** - Create a content model/structure by clicking on the space and then click on the content model and then finally define the content types by clicking on the `create content type` button
+**Step # 2:** - Create a Space and give a descrivptive name like `content is king`.
+**Step # 3:** - Create a content model/structure by clicking on the space and then click on the content model and then finally define the content types by clicking on the `create content type` button.
 **Step # 4:** - Add information to the content model.
 **Step 5:** Add content and click on `publish` button.
 **Step 6:** Create an access token of your content by going to `settings`> `API keys`>`Add API key`, write the name of your API token and click on the `add API key` to create the access token.
